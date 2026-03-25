@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Clean Light Theme */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+  }
+
+  .dark {
+    /* Clean Dark Theme */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+body {
+  color: hsl(var(--foreground));
+  /* background-color: hsl(var(--background)); Commented out so global background animation shows through */
+  font-family: Arial, Helvetica, sans-serif;
+}
