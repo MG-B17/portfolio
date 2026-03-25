@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { User } from "lucide-react";
 import { SiFlutter, SiDart, SiFirebase, SiReact } from "react-icons/si";
 import { portfolioData } from "@/data/portfolio";
@@ -64,7 +65,12 @@ export default function About() {
             {/* Avatar Profile Box */}
             <div className="shrink-0 relative">
               <div className="w-32 h-32 md:w-48 md:h-48 rounded-[2.5rem] overflow-hidden bg-gradient-to-tr from-blue-500/10 to-indigo-500/10 flex items-center justify-center border-4 border-background/50 shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-500">
-                <img src={portfolioData.personal.headshot || "/assets/images/headshot.png"} alt={portfolioData.personal.name} className="w-full h-full object-cover" />
+                <Image 
+                  src={portfolioData.personal.headshot || "/assets/images/headshot.png"} 
+                  alt={portfolioData.personal.name} 
+                  fill
+                  className="object-cover" 
+                />
               </div>
               <div className="absolute inset-0 bg-blue-500/20 blur-[50px] rounded-full scale-125 -z-10 group-hover:bg-blue-500/30 transition-colors duration-500" />
             </div>

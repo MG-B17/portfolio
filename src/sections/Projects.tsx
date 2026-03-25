@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ExternalLink, Github, Smartphone } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 
@@ -27,10 +28,11 @@ export default function Projects() {
             >
               {/* Project Visual Container */}
               <div className={`aspect-video w-full relative flex items-center justify-center overflow-hidden border-b border-foreground/5`}>
-                <img 
+                <Image 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700" 
                 />
                 {/* Overlay filter */}
                 <div className="absolute inset-0 bg-background/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500" />

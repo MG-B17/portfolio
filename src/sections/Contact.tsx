@@ -68,7 +68,7 @@ export default function Contact() {
           >
             <h3 className="text-2xl font-bold mb-6 text-foreground">Contact Information</h3>
             <p className="text-foreground/70 mb-10 leading-relaxed text-lg">
-              I'm always interested in hearing about new projects, opportunities, or just having a chat about the latest in mobile development.
+              I&apos;m always interested in hearing about new projects, opportunities, or just having a chat about the latest in mobile development.
             </p>
 
             <div className="space-y-8 mb-12">

@@ -7,7 +7,7 @@ export default function Skills() {
   const { skillCategories, skillsContext } = portfolioData;
 
   // Semantic icons mapped to categories for a highly engineered feel
-  const icons = [<SiFlutter size={28}/>, <SiDart size={28}/>, <SiFirebase size={28}/>, <SiGithub size={28}/>];
+  const icons = [<SiFlutter key="flutter" size={28}/>, <SiDart key="dart" size={28}/>, <SiFirebase key="firebase" size={28}/>, <SiGithub key="github" size={28}/>];
 
   return (
     <section id="skills" className="py-32 px-4 sm:px-6 lg:px-8 relative backdrop-blur-[2px] z-10">
