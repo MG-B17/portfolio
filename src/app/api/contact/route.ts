@@ -7,9 +7,10 @@ import { portfolioData } from "@/data/portfolio";
  * Uses Resend (https://resend.com) to dispatch real emails.
  */
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
+  // Initialize Resend lazily inside the handler to prevent build-time errors
+  const resend = new Resend(process.env.RESEND_API_KEY || "re_placeholder_for_build");
+  
   try {
     const body = await req.json();
     const { name, email, subject, message } = body;
