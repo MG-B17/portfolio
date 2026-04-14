@@ -110,6 +110,31 @@ export const portfolioData = {
 
   projects: [
     {
+      title: "Smart Fitness & Activity Tracker",
+      description:
+        " StrideX is a precision-built fitness companion that turns raw sensor data into meaningful health insights — in real time. Engineered with Clean Architecture. The app leverages the device's hardware Pedometer for low-power step detection, persists all user data locally with Sqflite for a fully offline experience, and delivers a polished adaptive UI with Light & Dark mode support. Shipped as a lean 20 MB APK without compromising on features or performance",
+      techStack: [
+        "Flutter",
+        "Dart",
+        "Cubit + Provider ",
+        "Sqflite + Shared Preferences",
+        "Lottie Animations",
+        "Adaptive Theming",
+        "Clean Architecture",
+        "MVVM"
+      ],
+      highlights: [
+        "Offline-first approach using local database",
+        "Accurate prayer times and Quran data integration",
+        "Smooth and optimized user experience",
+        "Scalable architecture for long-term maintainability"
+      ],
+      type: "Mobile Application",
+      image: images.projects.stridex,
+      githubUrl: "https://github.com/MG-B17/STRIDE-X.git",
+      liveUrl: "#"
+    },
+    {
       title: "Anomatrix – AI-Powered Surveillance System",
       description:
         "Engineered an AI-powered surveillance application that leverages computer vision to detect anomalies such as theft, accidents, and suspicious activities. The system processes both live and recorded video streams, providing real-time alerts and intelligent insights to enhance security monitoring and response efficiency.",

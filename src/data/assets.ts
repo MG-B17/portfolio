@@ -8,5 +8,6 @@ export const images = {
     meal: "/assets/images/project_meal.png",
     muslim: "/assets/images/project_muslim.png",
     movie: "/assets/images/project_movie.png",
+    stridex:"/assets/images/stride_X .png"
   }
 };
