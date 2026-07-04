@@ -311,7 +311,7 @@ export const portfolioData = {
     linkedin: "https://www.linkedin.com/in/mostafa-galal-17-m",
     twitter: "https://x.com/mostafagalal_17",
     whatsapp: "https://wa.me/201033589095",
-    resumeUrl: "https://drive.google.com/file/d/12onRyBeH3c9fWXsoPny0w-ntViKsRxMf/view?usp=drive_link"
+    resumeUrl: "https://drive.google.com/file/d/1kcUmRRbNwIqLuBbLgQW8nN4dTJZMlJ3E/view?usp=sharing"
   },
 
   // 7. FOOTER SECTION
