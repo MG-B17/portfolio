@@ -82,6 +82,7 @@ export const portfolioData = {
       title: "Backend & Data",
       skills: [
         "Firebase (Auth, Firestore, Notifications)",
+        "Supabase",
         "RESTful APIs",
         "Dio",
         "HTTP",
@@ -109,6 +110,33 @@ export const portfolioData = {
   },
 
   projects: [
+    {
+      title: "Bridge X — Collaborative Training Platform",
+      description:
+        "A cross-platform Flutter application that bridges academia and the job market through real-world team-based projects. Built with Feature-first Clean Architecture across 14 independent modules. The platform features an AI-powered team matching engine, real-time messaging via Supabase Realtime, a multi-layered evaluation system (The Score™), and full project/task management. Implements an 8-step auth-aware navigation guard, Firebase Cloud Messaging, and a responsive UI with Lottie animations and custom theming.",
+      techStack: [
+        "Flutter",
+        "Dart",
+        "flutter_bloc (Cubits)",
+        "GetIt DI",
+        "GoRouter",
+        "Dio + Interceptors",
+        "Supabase Realtime",
+        "Firebase Cloud Messaging",
+        "Sqflite + Shared Preferences",
+        "Clean Architecture",
+      ],
+      highlights: [
+        "AI-powered team matching engine",
+        "Real-time chat with Supabase Realtime",
+        "Multi-layered peer/self/automated evaluation system",
+        "Feature-first Clean Architecture with 14 modules",
+      ],
+      type: "Mobile & Desktop Application",
+      image: images.projects.bridgeX,
+      githubUrl: "https://github.com/MG-B17/Bridge_X",
+      liveUrl: "#",
+    },
     {
       title: "Smart Fitness & Activity Tracker",
       description:
