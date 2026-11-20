@@ -1,31 +1,32 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
+  darkMode: ["class", '[data-theme="dark"]'],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/data/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', 'sans-serif'],
-        serif: ['var(--font-serif)', 'serif'],
+        display: ["var(--font-display)", "var(--font-body)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        // Override default blue to a sleek, modern Indigo blend
-        blue: {
-          400: "#818cf8", // modern soft indigo
-          500: "#6366f1", // modern vibrant indigo
-          600: "#4f46e5", // modern deep indigo
-        }
+        bg: "var(--bg)",
+        surface: "var(--surface)",
+        ink: "var(--ink)",
+        muted: "var(--muted)",
+        signal: "var(--signal)",
+        "on-signal": "var(--on-signal)",
+        line: "var(--line)",
       },
     },
   },
   plugins: [],
 };
+
 export default config;
