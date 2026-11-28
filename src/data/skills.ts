@@ -103,7 +103,7 @@ export const skillsData: SkillsData = {
         "Antigravity",
         "OpenCode CLI",
       ],
-      usedIn: "AGENT.md architecture rules & reviewed code across all 9 projects",
+      usedIn: "AGENT.md architecture rules & reviewed code across all 10 projects",
     },
   },
 };

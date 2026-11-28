@@ -7,10 +7,12 @@ export const contactData: ContactData = {
   directEmailLabel: "Direct email",
   email: "mostafagalalbakri@gmail.com",
   links: [
-    { label: "GitHub", href: "https://github.com/MG-B17" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/mostafa-galal-17-m" },
-    { label: "WhatsApp", href: "https://wa.me/201033589095" },
-    { label: "X", href: "https://x.com/mostafagalal_17" },
+    { label: "GitHub", href: "https://github.com/MG-B17", icon: "github" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/mostafa-galal-17-m", icon: "linkedin" },
+    { label: "WhatsApp", href: "https://wa.me/201033589095", icon: "whatsapp" },
+    { label: "X", href: "https://x.com/mostafagalal_17", icon: "x" },
+    { label: "Facebook", href: "https://www.facebook.com/share/19xLAhuRfK/", icon: "facebook" },
+    { label: "Instagram", href: "https://www.instagram.com/mostafagalal_17?evlk=ZDR0ZXhieXY4MTMw", icon: "instagram" },
   ],
   form: {
     ariaLabel: "Contact form",

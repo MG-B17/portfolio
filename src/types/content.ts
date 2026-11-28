@@ -76,6 +76,7 @@ export interface Project {
   github?: string;
   linkedin?: string;
   live?: string;
+  demoVideo?: string;
   screens: string[];
   screenAlts?: string[];
   featured?: boolean;
@@ -88,6 +89,10 @@ export interface WorkData {
   githubLinkLabel: string;
   linkedinLinkLabel: string;
   liveLinkLabel: string;
+  demoLinkLabel: string;
+  demoModalCloseAriaLabel: string;
+  demoModalTitleSuffix: string;
+  demoVideoUnsupported: string;
   emptyScreensText: string;
   screensLabel: string;
   screenLabel: string;
@@ -183,13 +188,17 @@ export interface ContactLimits {
   message: number;
 }
 
+export interface ContactLinkData extends LinkData {
+  icon: "github" | "linkedin" | "whatsapp" | "x" | "facebook" | "instagram";
+}
+
 export interface ContactData {
   heading: string;
   subheading: string;
   eyebrow: string;
   directEmailLabel: string;
   email: string;
-  links: LinkData[];
+  links: ContactLinkData[];
   form: {
     ariaLabel: string;
     composeTitle: string;

@@ -4,7 +4,7 @@ export const layoutData: LayoutData = {
   name: "Mostafa Galal El Bakri",
   title: "Mostafa Galal El Bakri · Flutter Developer",
   description:
-    "I build cross-platform Flutter apps from first idea to a working release. Right now: Daftari, an Arabic-first, offline-first Flutter app for Egyptian shopkeepers to manage customer credit, track payments, and securely back up their ledgers.",
+    "I build cross-platform Flutter apps from first idea to a working release. Right now: Daftari is under Google Play review — an Arabic-first, offline-first Flutter app for Egyptian shopkeepers to manage customer credit, track payments, and securely back up their ledgers.",
   brand: { text: "MGB", mark: "®", href: "/" },
   primaryNavAriaLabel: "Primary",
   nav: [

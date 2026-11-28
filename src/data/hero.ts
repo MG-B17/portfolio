@@ -8,11 +8,12 @@ export const heroData: HeroData = {
   ledePrefix:
     "I architect and ship cross-platform Flutter apps from first idea to production release. Right now: ",
   ledeHighlight: "Daftari",
-  ledeSuffix: ", an Arabic-first, offline-first Flutter app that replaces a shopkeeper's paper credit notebook to manage customer credit, track payments, and securely back up their ledgers.",
+  ledeSuffix:
+    " is under Google Play review — an Arabic-first, offline-first Flutter app that replaces a shopkeeper's paper credit notebook to manage customer credit, track payments, and securely back up their ledgers.",
   primaryCta: { label: "Explore my work ↗", href: "#work" },
   secondaryCta: { label: "Get in touch", href: "#contact" },
   stats: [
-    { value: "9", label: "Flutter projects" },
+    { value: "10", label: "Flutter projects" },
     { value: "Clean Arch", label: "Bloc · Cubit · SOLID" },
     { value: "iOS & Android", label: "Cross-platform targets" },
   ],

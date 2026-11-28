@@ -184,13 +184,24 @@ test("security headers apply to all routes", async () => {
   });
 });
 
-test("all 27 project screenshots remain available", () => {
+test("all 30 project screenshots remain available", () => {
   const { projects } = loadTs("src/data/work.ts").workData;
-  assert.equal(projects.length, 9);
+  assert.equal(projects.length, 10);
   const screens = projects.flatMap((project) => project.screens);
-  assert.equal(screens.length, 27);
+  assert.equal(screens.length, 30);
   for (const screen of screens) {
     assert.ok(existsSync(new URL(`../public${screen}`, import.meta.url)), screen);
+  }
+});
+
+test("all 10 project demo videos exist with exact casing", () => {
+  const { projects } = loadTs("src/data/work.ts").workData;
+  const videoFiles = new Set(readdirSync(new URL("../public/assets/videos/", import.meta.url)));
+  const videos = projects.map((project) => project.demoVideo).filter(Boolean);
+  assert.equal(videos.length, 10);
+  for (const video of videos) {
+    assert.ok(video.startsWith("/assets/videos/"), video);
+    assert.ok(videoFiles.has(video.slice("/assets/videos/".length)), video);
   }
 });
 
@@ -306,7 +317,7 @@ test("section content retains featured order, contact limits and layout configur
   const { heroData } = loadTs("src/data/hero.ts");
   const { layoutData } = loadTs("src/data/layout.ts");
   const { skillsData } = loadTs("src/data/skills.ts");
-  assert.equal(workData.projects.filter((project) => project.featured).slice(0, 2).map((project) => project.slug).join(","), "bridge-x,stridex");
+  assert.equal(workData.projects.filter((project) => project.featured).slice(0, 2).map((project) => project.slug).join(","), "daftari,bridge-x");
   assert.equal(Number(heroData.stats[0].value), workData.projects.length);
   assert.ok(layoutData.nav.some((item) => item.href === "/#skills"));
   assert.equal(layoutData.whatsapp.href, contactDataModule.contactData.links.find((link) => link.label === "WhatsApp").href);
@@ -317,18 +328,17 @@ test("section content retains featured order, contact limits and layout configur
   assert.equal(skillsData.tiles.state.inspectorLeft, "emit(Loaded)");
 });
 
-test("every project exposes at least one outbound link", () => {
+test("every project exposes at least one link or demo video", () => {
   const { workData } = loadTs("src/data/work.ts");
   for (const project of workData.projects) {
     assert.ok(
-      project.github || project.linkedin || project.live,
-      `${project.slug}: needs a GitHub, LinkedIn, or live link`,
+      project.github || project.demoVideo || project.linkedin || project.live,
+      `${project.slug}: needs a GitHub, demoVideo, LinkedIn, or live link`,
     );
   }
   const bySlug = Object.fromEntries(workData.projects.map((project) => [project.slug, project]));
-  assert.equal(bySlug["up-to-do"].linkedin, "https://lnkd.in/p/e9kw8V7U");
-  assert.equal(bySlug["zoyota-ecommerce"].linkedin, "https://lnkd.in/p/eXTFpbhi");
-  assert.equal(workData.linkedinLinkLabel, "View on LinkedIn ↗");
+  assert.equal(bySlug["up-to-do"].linkedin, undefined);
+  assert.equal(bySlug["zoyota-ecommerce"].linkedin, undefined);
 });
 
 test("Tailwind scans the moved page sections for production styles", () => {
